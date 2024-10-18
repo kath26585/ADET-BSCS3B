@@ -1,0 +1,58 @@
+body {
+    background-image: url('../image/KATH.jpg');
+    background-size: cover; /* Ensure the background covers the entire viewport */
+}
+
+.registration-form {
+    padding: 50px 0;
+}
+
+.registration-form form {
+    background-color: #ffccf2; /* Soft pink background */
+    max-width: 600px;
+    margin: auto;
+    padding: 50px 70px;
+    border-radius: 0; /* Set to 0 for sharp corners */
+    box-shadow: 0px 2px 10px rgba(36, 70, 224, 0.2);
+}
+
+.registration-form .item {
+    border-radius: 20px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+    border: 1px solid #ff80ab; /* Light pink border */
+}
+
+.registration-form .item:focus {
+    border-color: #d5006d; /* Darker pink on focus */
+    box-shadow: 0 0 5px rgba(213, 0, 109, 0.5);
+}
+
+/* Centering the submit button */
+.registration-form .submit {
+    border-radius: 5px; /* Slightly rounded corners for a rectangle look */
+    padding: 15px 30px; /* Increase padding for a bigger button */
+    font-size: 18px; /* Font size */
+    font-weight: bold;
+    background-color: #d5006d; /* Dark pink button */
+    border: none;
+    color: white; /* White text for better contrast */
+    display: block; /* Make it a block element */
+    margin: 20px auto; /* Center the button and add margin */
+    width: 100%; /* Full width of the container */
+    max-width: 200px; /* Limit max width for aesthetic */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.registration-form .submit:hover {
+    background-color: #c5005d; /* Slightly darker on hover */
+}
+
+.greeting-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.greeting-text h3 {
+    color: #d5006d; /* Dark pink for the greeting text */
+}

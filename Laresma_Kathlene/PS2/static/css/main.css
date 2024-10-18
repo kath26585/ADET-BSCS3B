@@ -1,0 +1,46 @@
+body {
+    background-image: url('../image/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: cover;
+}
+
+.registration-form {
+    padding: 50px 0;
+}
+
+.registration-form form {
+    background-color: rgb(215, 201, 216); /* Slightly transparent for a better effect */
+    max-width: 600px;
+    margin: auto;
+    padding: 50px 70px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: 0px 2px 10px rgba(141, 1, 134, 0.89);
+}
+
+.registration-form .item {
+    border-radius: 20px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+}
+
+.registration-form .submit {
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #bf05e4;
+    border: none;
+    color: rgb(19, 18, 18);
+    margin-top: 20px;
+}
+
+.greeting-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.greeting-text h3 {
+    color: #121213;
+}

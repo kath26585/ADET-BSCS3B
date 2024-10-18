@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url("../static/KATH.jpg") no-repeat center center fixed; /* Background image */
+            background-size: cover; /* Ensure the background covers the entire view */
+            height: 100vh; /* Full height */
+            display: flex; /* Center the container */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            margin: 20px; /* Margin for smaller screens */
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+            border-radius: 20px; /* Softer rounded corners */
+            padding: 30px; /* Reduced padding */
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+            width: 100%;
+            max-width: 500px; /* Max width for larger screens */
+        }
+
+        h2 {
+            text-align: center;
+            color: #d5006d; /* Darker pink for the heading */
+            margin-bottom: 15px;
+            font-size: 28px; /* Increased font size */
+        }
+
+        p {
+            text-align: center;
+            color: #333; /* Dark gray for text */
+            margin-bottom: 25px;
+            font-size: 16px; /* Larger font size */
+        }
+
+        .field-value {
+            display: flex; /* Flexbox for horizontal layout */
+            justify-content: space-between; /* Space between field and value */
+            padding: 10px 0; /* Padding for spacing */
+            border-bottom: 1px solid #ddd; /* Light gray border for rows */
+        }
+
+        .field {
+            font-weight: bold; /* Bold for field labels */
+            color: #d5006d; /* Dark pink for field labels */
+        }
+
+        .btn-danger {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 25px; /* Rounded button */
+            background-color: #d5006d; /* Dark pink button */
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            transition: background-color 0.3s, transform 0.2s; /* Transition for hover effect */
+        }
+
+        .btn-danger:hover {
+            background-color: #c5005d; /* Darker pink on hover */
+            transform: scale(1.05); /* Slightly enlarge button on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Hello, {{ first_name }}!</h2>
+        
+        <div class="field-value">
+            <span class="field">First Name:</span>
+            <span>{{ first_name }}</span>
+        </div>
+        <div class="field-value">
+            <span class="field">Middle Name:</span>
+            <span>{{ session.get('middle_name', 'N/A') }}</span>
+        </div>
+        <div class="field-value">
+            <span class="field">Last Name:</span>
+            <span>{{ session.get('last_name', 'N/A') }}</span>
+        </div>
+        <div class="field-value">
+            <span class="field">Birthdate:</span>
+            <span>{{ session.get('birthdate', 'N/A') }}</span>
+        </div>
+        <div class="field-value">
+            <span class="field">Email:</span>
+            <span>{{ session.get('email', 'N/A') }}</span>
+        </div>
+        <div class="field-value">
+            <span class="field">Address:</span>
+            <span>{{ session.get('address', 'N/A') }}</span>
+        </div>
+        <div class="field-value">
+            <span class="field">Username:</span>
+            <span>{{ session.get('username', 'N/A') }}</span>
+        </div>
+
+        <a href="/logout" class="btn btn-danger">Logout</a>
+    </div>
+</body>
+</html>
